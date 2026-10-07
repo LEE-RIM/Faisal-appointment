@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faisal Appointment | Owner Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="owner">
+    <div class="page-shell owner-shell">
+      <header class="topbar owner-topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">F</div>
+          <div>
+            <p class="brand-name">Faisal Appointment</p>
+            <small>Owner Dashboard</small>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Back to Booking</a>
+        </nav>
+      </header>
+
+      <main class="owner-main">
+        <section class="owner-intro">
+          <div class="owner-intro-copy">
+            <p class="eyebrow">Meeting management</p>
+            <h1>Your meetings,<br />in a clearer view.</h1>
+            <p>Review requests, confirm plans, and keep every conversation moving.</p>
+          </div>
+          <div class="dashboard-scene" aria-hidden="true">
+            <div class="scene-shadow"></div>
+            <div class="scene-card">
+              <div class="scene-card-top">
+                <span class="scene-mark">F</span>
+                <span>FAISAL APPOINTMENT</span>
+                <i></i>
+              </div>
+              <div class="scene-copy">
+                <span>ROOM FOR GOOD IDEAS</span>
+                <strong>Make time<br />for what matters.</strong>
+              </div>
+              <div class="scene-line"><b>01</b><span>Business & collaboration</span><em>READY</em></div>
+              <div class="scene-line"><b>02</b><span>People worth meeting</span><em>OPEN</em></div>
+            </div>
+            <div class="scene-chip">MEET · PLAN · GROW</div>
+          </div>
+        </section>
+
+        <section class="owner-panel">
+          <div class="panel-header owner-header-row">
+            <div>
+              <p class="eyebrow">Private workspace</p>
+              <h2>Owner access</h2>
+            </div>
+            <span id="todayDate" class="date-pill"></span>
+          </div>
+
+          <div class="owner-access-box">
+            <label>
+              Owner Code
+              <input type="password" id="ownerCode" placeholder="Enter owner code" />
+            </label>
+            <button id="ownerAccessBtn" class="owner-btn">Open Dashboard</button>
+            <p id="ownerStatus" class="status-note">Enter the owner code to view appointment requests.</p>
+          </div>
+        </section>
+
+        <section id="ownerDashboard" class="owner-dashboard hidden">
+          <div class="dashboard-heading">
+            <div>
+              <p class="eyebrow">Your overview</p>
+              <h2>Appointment requests</h2>
+            </div>
+            <span class="dashboard-live"><i></i> All requests</span>
+          </div>
+          <div class="summary-row">
+            <div class="summary-card">
+              <span>Total Requests</span>
+              <strong id="totalRequests">0</strong>
+            </div>
+            <div class="summary-card">
+              <span>Confirmed</span>
+              <strong id="confirmedTotal">0</strong>
+            </div>
+            <div class="summary-card">
+              <span>Pending</span>
+              <strong id="pendingTotal">0</strong>
+            </div>
+          </div>
+
+          <div id="ownerAppointmentList" class="appointment-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

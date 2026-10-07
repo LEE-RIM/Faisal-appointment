@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faisal Appointment | Schedule a Meeting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-page="booking">
+    <div class="page-shell booking-shell">
+      <header class="topbar booking-topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">F</div>
+          <div>
+            <p class="brand-name">Faisal Appointment</p>
+            <small>Professional Scheduling</small>
+          </div>
+        </div>
+        <nav class="nav-links">
+          <a href="#booking">Appointments</a>
+          <a href="owner.html">Owner Portal</a>
+        </nav>
+        <a class="nav-btn" href="#booking">Request Meeting</a>
+      </header>
+
+      <main class="container">
+        <section class="hero booking-hero">
+          <div class="hero-copy">
+            <p class="eyebrow">PROFESSIONAL MEETINGS · MADE SIMPLE</p>
+            <h1>Move important conversations <span>forward with Faisal.</span></h1>
+            <p class="lead">
+              Schedule time with Faisal for business discussions, partnership opportunities,
+              project planning, and other professional matters.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-btn" href="#booking">Request a meeting <span aria-hidden="true">↗</span></a>
+              <a class="secondary-btn" href="#schedule">How requests work</a>
+            </div>
+            <ul class="stats">
+              <li><strong>01</strong><span>Business discussions</span></li>
+              <li><strong>02</strong><span>Partnerships</span></li>
+              <li><strong>03</strong><span>Project planning</span></li>
+            </ul>
+          </div>
+
+          <div class="booking-visual">
+            <img
+              src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85"
+              srcset="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=720&q=80 720w, https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=85 1200w"
+              sizes="(max-width: 680px) calc(100vw - 64px), (max-width: 900px) 70vw, 42vw"
+              alt="Business growth analytics displayed on a laptop"
+              fetchpriority="high"
+            />
+            <div class="growth-panel" aria-hidden="true">
+              <span>GROWTH IN MOTION</span>
+              <strong>Built on progress</strong>
+              <div class="growth-chart">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                <b class="growth-trend"></b>
+              </div>
+            </div>
+            <div class="visual-caption">
+              <span>FAISAL · PROFESSIONAL MEETINGS</span>
+              <strong>Progress starts<br />with a plan.</strong>
+              <small><i></i> Business · Ideas · Growth</small>
+            </div>
+          </div>
+        </section>
+
+        <section id="booking" class="booking-layout">
+          <form id="appointmentForm" class="booking-form">
+            <div class="section-head">
+              <p class="eyebrow">MEETING DETAILS</p>
+              <h2>Submit a meeting request</h2>
+            </div>
+
+            <div class="form-grid">
+              <label>
+                Full Name
+                <input type="text" id="name" name="name" placeholder="Enter your name" autocomplete="name" required />
+              </label>
+
+              <label>
+                Email Address
+                <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required />
+              </label>
+
+              <label>
+                Phone Number
+                <input type="tel" id="phone" name="phone" placeholder="+92 300 0000000" autocomplete="tel" inputmode="tel" required />
+              </label>
+
+              <label>
+                Meeting With
+                <input type="text" id="person" name="person" value="Faisal" readonly />
+              </label>
+
+              <label>
+                Meeting Topic
+                <select id="service" name="service" required>
+                  <option value="">Select a topic</option>
+                  <option value="Business">Business</option>
+                  <option value="Partnership">Partnership</option>
+                  <option value="Client Discussion">Client Discussion</option>
+                  <option value="Follow-up">Follow-up</option>
+                  <option value="Project Meeting">Project Meeting</option>
+                  <option value="Interview">Interview</option>
+                </select>
+              </label>
+
+              <label>
+                Preferred Date
+                <input type="date" id="date" name="date" required />
+              </label>
+
+              <label>
+                Preferred Time
+                <input type="time" id="time" name="time" required />
+              </label>
+            </div>
+
+            <p class="prototype-notice" role="note">Demo notice: Requests are saved only in this browser. Faisal is not notified.</p>
+            <button type="submit" class="submit-btn">Submit request <span aria-hidden="true">↗</span></button>
+          </form>
+
+          <aside id="schedule" class="appointments-panel">
+            <div class="panel-header">
+              <div>
+                <p class="eyebrow">NEXT STEPS</p>
+                <h3>Request and confirmation</h3>
+              </div>
+              <span id="todayDate" class="date-pill"></span>
+            </div>
+
+            <div class="notes-box">
+              <p><b>01</b><span><strong>Choose a time</strong>Select your preferred date and time, then choose a meeting topic.</span></p>
+              <p><b>02</b><span><strong>Keep your reference</strong>Your appointment ID appears after you submit the request.</span></p>
+              <p class="response-note">A submitted request is not a confirmed appointment.</p>
+            </div>
+          </aside>
+        </section>
+
+        <section class="booking-faq" aria-labelledby="faqTitle">
+          <div class="faq-heading">
+            <p class="eyebrow">HELPFUL INFORMATION</p>
+            <h2 id="faqTitle">Common questions</h2>
+          </div>
+          <div class="faq-list">
+            <details>
+              <summary>Is my meeting confirmed when I submit?</summary>
+              <p>No. A request is not confirmed until Faisal approves the appointment.</p>
+            </details>
+            <details>
+              <summary>Where can I find my appointment ID?</summary>
+              <p>Your ID appears in the confirmation window after you submit. Keep it for your reference.</p>
+            </details>
+            <details>
+              <summary>Will Faisal receive my request?</summary>
+              <p>Not in this demo. Requests stay in this browser and are not sent to Faisal or emailed.</p>
+            </details>
+            <details>
+              <summary>What time zone should I use?</summary>
+              <p>Choose the time shown on your device. Confirm the time zone with Faisal before the meeting.</p>
+            </details>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <div id="confirmationModal" class="modal hidden" aria-modal="true" role="dialog" aria-labelledby="confirmationTitle" aria-describedby="confirmationMessage" tabindex="-1">
+      <div class="modal-content">
+        <button id="closeModal" class="close-btn" aria-label="Close">×</button>
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h3 id="confirmationTitle">Request Saved</h3>
+        <p id="confirmationMessage">This demo stores requests in this browser only. Faisal has not been notified.</p>
+        <div class="id-box">
+          <span>Appointment ID</span>
+          <strong id="appointmentIdValue">-</strong>
+        </div>
+        <p id="appointmentSummary" class="summary-text"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
